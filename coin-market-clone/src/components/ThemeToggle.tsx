@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import clsx from "clsx";
 
 export default function ThemeToggle() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   // When mounted on client, now we can show UI

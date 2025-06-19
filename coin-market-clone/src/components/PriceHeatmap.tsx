@@ -4,6 +4,7 @@ import useSWR from "swr";
 import { fetchTopCoins, TopCoin } from "@/lib/coingecko";
 import clsx from "clsx";
 import { useState } from "react";
+import Image from "next/image";
 
 const fetcher = () => fetchTopCoins();
 

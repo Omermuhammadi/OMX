@@ -5,10 +5,11 @@ import useSWR from "swr";
 import { fetchTopCoins, TopCoin } from "@/lib/coingecko";
 import { X } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 import clsx from "clsx";
 
 export default function WatchlistDrawer() {
-  const { ids, holdings, setAmount, toggle } = useWatchlist();
+  const { ids, holdings, setAmount } = useWatchlist();
   const { data } = useSWR<TopCoin[]>("top-coins", fetchTopCoins);
   const [open, setOpen] = useState(false);
   if (!data || ids.length === 0) return null;
