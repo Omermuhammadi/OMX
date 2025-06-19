@@ -43,7 +43,7 @@ export async function fetchGlobalMetrics(): Promise<GlobalMetricsResponse["data"
   return json.data;
 }
 
-export async function fetchTopCoins(perPage = 100): Promise<TopCoin[]> {
+export async function fetchTopCoins(): Promise<TopCoin[]> {
   const headers: Record<string, string> = {};
   if (API_KEY) headers["x-cg-pro-api-key"] = API_KEY;
 
