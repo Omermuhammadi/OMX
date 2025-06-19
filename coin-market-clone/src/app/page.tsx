@@ -4,7 +4,6 @@ import TopCoinsTable from "@/components/TopCoinsTable";
 import LocalAnalytics from "@/components/LocalAnalytics";
 import CryptoBubbles from "@/components/CryptoBubbles";
 import WatchlistDrawer from "@/components/WatchlistDrawer";
-import ShareSnapshotButton from "@/components/ShareSnapshotButton";
 
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
       <LocalAnalytics />
       <CryptoBubbles />
       <WatchlistDrawer />
-      <ShareSnapshotButton />
     </main>
   );
 }
