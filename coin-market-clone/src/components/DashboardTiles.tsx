@@ -82,11 +82,8 @@ export default function DashboardTiles() {
     fetcher,
     { refreshInterval: 3600000 }
   );
-  const { data: alt } = useSWR<{ index: number }>(
-    "/api/analytics/altseason",
-    fetcher,
-    { refreshInterval: 3600000 }
-  );
+  // Static altcoin season index
+  const alt = { index: 23 };
 
   const fmt = (n: number, digits = 0) =>
     Intl.NumberFormat("en-US", {
@@ -117,7 +114,7 @@ export default function DashboardTiles() {
       {/* Altcoin Season */}
       <div className="flex flex-col justify-between rounded-lg border border-black/5 dark:border-white/10 bg-white dark:bg-[#111] p-4 shadow-sm">
         <div className="text-xs text-foreground/60 uppercase tracking-wide mb-2">Altcoin Season</div>
-        <AltSeasonBar index={alt?.index ?? 23} />
+        <AltSeasonBar index={alt.index} />
       </div>
     </section>
   );
