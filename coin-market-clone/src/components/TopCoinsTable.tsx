@@ -73,7 +73,13 @@ export default function TopCoinsTable() {
                 </td>
                 <td className="px-4 py-3 whitespace-nowrap">{coin.market_cap_rank}</td>
                 <td className="px-4 py-3 flex items-center gap-2 whitespace-nowrap">
-                  <img src={coin.image} alt="logo" className="h-5 w-5" />
+                  <Image
+  src={coin.image}
+  alt={`${coin.name} (${coin.symbol}) logo`}
+  width={20}
+  height={20}
+  className="h-5 w-5"
+/>
                   <span className="font-medium">{coin.name}</span>
                   <span className="text-foreground/60 uppercase text-xs">{coin.symbol}</span>
                 </td>

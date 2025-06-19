@@ -5,6 +5,7 @@ import { fetchTopCoins, TopCoin } from "@/lib/coingecko";
 import clsx from "clsx";
 import { useState } from "react";
 import Image from "next/image";
+import { useState } from "react";
 
 const fetcher = () => fetchTopCoins();
 
@@ -43,7 +44,13 @@ export default function PriceHeatmap() {
       </div>
       {hover && (
         <div className="mt-4 flex items-center gap-2">
-          <img src={hover.image} alt={hover.symbol} className="h-5 w-5" />
+          <Image
+  src={hover.image}
+  alt={hover.symbol}
+  width={20}
+  height={20}
+  className="h-5 w-5"
+/>
           <span className="font-medium">{hover.name}</span>
           <span className="text-sm text-foreground/60 uppercase">{hover.symbol}</span>
           <span

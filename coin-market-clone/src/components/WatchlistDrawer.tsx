@@ -48,7 +48,13 @@ export default function WatchlistDrawer() {
           {coins.map((c) => (
             <div key={c.id} className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-2">
-                <img src={c.image} className="h-5 w-5" />
+                <Image
+  src={c.image}
+  alt={`${c.name} (${c.symbol}) logo`}
+  width={20}
+  height={20}
+  className="h-5 w-5"
+/>
                 <span>{c.symbol.toUpperCase()}</span>
               </div>
               <input
